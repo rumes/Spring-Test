@@ -4,6 +4,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+
+import com.rumes.springrestapi.role.Role;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -24,5 +27,8 @@ public class User {
 	private String last_name;
 	
 	private String address;
+	
+	@ManyToOne
+	private Role role;
 	
 }
